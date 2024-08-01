@@ -16,7 +16,7 @@ COPY . .
 RUN go build ./cmd/tesla-http-proxy
 
 
-EXPOSE 443
+EXPOSE 8081
 
 # Run
-CMD [ "./tesla-http-proxy", "-tls-key", "key.pem", "-cert", "cert.pem", "-key-file", "private.pem", "-port", "443", "-host", "0.0.0.0" ]
+CMD [ "./tesla-http-proxy", "-tls-key", "key.pem", "-cert", "cert.pem", "-key-file", "private.pem", "-port", "8081", "-host", "0.0.0.0" ]
